@@ -4,15 +4,26 @@ import behaviours.ISell;
 
 public class Strings implements ISell {
 
+    private String description;
+    private double priceBuy;
+    private double priceSell;
+
+    public Strings(String description, double priceBuy, double priceSell) {
+        this.description = description;
+        this.priceBuy = priceBuy;
+        this.priceSell = priceSell;
+    }
+
     public String description() {
-        return "Strings";
+        return description;
     }
 
     public double priceBuy() {
-        return 10.00;
+        return priceBuy;
     }
 
     public double priceSell() {
-        return 12.00;
+        return priceSell;
     }
+
 }

@@ -3,15 +3,27 @@ package stock;
 import behaviours.ISell;
 
 public class DrumSticks implements ISell {
+
+    private String description;
+    private double priceBuy;
+    private double priceSell;
+
+    public DrumSticks(String description, double priceBuy, double priceSell) {
+        this.description = description;
+        this.priceBuy = priceBuy;
+        this.priceSell = priceSell;
+    }
+
     public String description() {
-        return "Drum Sticks";
+        return description;
     }
 
     public double priceBuy() {
-        return 20;
+        return priceBuy;
     }
 
     public double priceSell() {
-        return 24;
+        return priceSell;
     }
+
 }
