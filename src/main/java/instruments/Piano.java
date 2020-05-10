@@ -1,8 +1,9 @@
 package instruments;
 
 import behaviours.IPlay;
+import behaviours.ISell;
 
-public class Piano extends Instrument implements IPlay {
+public class Piano extends Instrument implements IPlay, ISell {
 
     private int numberKeys;
     private String size;
@@ -23,5 +24,17 @@ public class Piano extends Instrument implements IPlay {
 
     public String play() {
         return "Plink plink";
+    }
+
+    public String description() {
+        return "Grand Piano";
+    }
+
+    public double priceBuy() {
+        return 8000;
+    }
+
+    public double priceSell() {
+        return 10000;
     }
 }

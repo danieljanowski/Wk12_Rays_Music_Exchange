@@ -1,8 +1,9 @@
 package instruments;
 
 import behaviours.IPlay;
+import behaviours.ISell;
 
-public class Guitar extends Instrument implements IPlay {
+public class Guitar extends Instrument implements IPlay, ISell {
 
     private int numberStrings;
     private String guitarType;
@@ -23,5 +24,17 @@ public class Guitar extends Instrument implements IPlay {
 
     public String play() {
         return "string, string";
+    }
+
+    public String description() {
+        return "Guitar";
+    }
+
+    public double priceBuy() {
+        return 200;
+    }
+
+    public double priceSell() {
+        return 299;
     }
 }
