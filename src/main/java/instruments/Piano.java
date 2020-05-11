@@ -7,11 +7,17 @@ public class Piano extends Instrument implements IPlay, ISell {
 
     private int numberKeys;
     private String size;
+    private String description;
+    private double priceBuy;
+    private double priceSell;
 
-    public Piano(String material, String colour, String type, int numberKeys, String size) {
+    public Piano(String material, String colour, String type, int numberKeys, String size, String description, double priceBuy, double priceSell) {
         super(material, colour, type);
         this.numberKeys = numberKeys;
         this.size = size;
+        this.description = description;
+        this.priceBuy = priceBuy;
+        this.priceSell = priceSell;
     }
 
     public int getNumberKeys() {
@@ -31,10 +37,10 @@ public class Piano extends Instrument implements IPlay, ISell {
     }
 
     public double priceBuy() {
-        return 8000;
+        return priceBuy;
     }
 
     public double priceSell() {
-        return 10000;
+        return priceSell;
     }
 }

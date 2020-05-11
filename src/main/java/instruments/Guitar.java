@@ -7,11 +7,17 @@ public class Guitar extends Instrument implements IPlay, ISell {
 
     private int numberStrings;
     private String guitarType;
+    private String description;
+    private double priceBuy;
+    private double priceSell;
 
-    public Guitar(String material, String colour, String type, int numberStrings, String guitarType) {
+    public Guitar(String material, String colour, String type, int numberStrings, String guitarType, String description, double priceBuy, double priceSell) {
         super(material, colour, type);
         this.numberStrings = numberStrings;
         this.guitarType = guitarType;
+        this.description = description;
+        this.priceBuy = priceBuy;
+        this.priceSell = priceSell;
     }
 
     public int getNumberStrings() {
@@ -31,10 +37,10 @@ public class Guitar extends Instrument implements IPlay, ISell {
     }
 
     public double priceBuy() {
-        return 200;
+        return priceBuy;
     }
 
     public double priceSell() {
-        return 299;
+        return priceSell;
     }
 }

@@ -20,4 +20,16 @@ public class Shop {
     public int countStock(){
         return stock.size();
     }
+
+    public double calculateMarkup(ISell item) {
+        return item.priceSell() - item.priceBuy();
+    }
+
+    public double totalProfit() {
+        double total = 0.00;
+        for (ISell item : stock) {
+            total += this.calculateMarkup(item);
+        }
+        return total;
+    }
 }
